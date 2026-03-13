@@ -9,6 +9,9 @@ public class Main {
     static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+
+//        creo array da far riempre all'utente
+
         ElementoMultimediale[] arrayDiMultimedia = new ElementoMultimediale[5];
         for (int i = 0; i < 5; i++) {
             System.out.println("\n Elemento " + (i + 1) + " di: 5");
@@ -19,10 +22,15 @@ public class Main {
             System.out.print("Scelta: ");
             int scelta = scanner.nextInt();
 
-            scanner.nextLine(); // consuma il new line rimasto
+//            FIX NON LO TOGLIERE PIU
+            scanner.nextLine(); // consuma il new line rimasto o una roba del genere
 
             System.out.print("Scegli il titolo del tuo elemento: ");
             String title = scanner.nextLine();
+
+
+//            switch che permettere di scegliere l'elemento e chiede gli altri parametri e
+//            salva l'elemento nell'arrayDiMultimedia
 
             switch (scelta) {
                 case 1:
@@ -53,6 +61,9 @@ public class Main {
             }
 
         }
+
+
+//        mostra gli elementi salvati e scelta dell'elemento da eseguire
 
         int scelta = -1;
 

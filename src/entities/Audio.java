@@ -5,11 +5,22 @@ public class Audio extends ElementoMultimediale implements Riproducibile {
     private int durata;
     private int volume;
 
+//    costruttore
+
     public Audio(String titolo, int durata, int volume) {
         super(titolo);
         this.durata = durata;
         this.volume = volume;
     }
+
+//    getter
+
+    public int getVolume() {
+        return volume;
+    }
+
+
+//    metodi
 
     @Override
     public void esegui() {
