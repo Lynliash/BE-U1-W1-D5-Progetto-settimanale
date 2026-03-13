@@ -21,4 +21,7 @@ public abstract class ElementoMultimediale {
         this.titolo = titolo;
     }
 
+//    metodi
+
+
 }
