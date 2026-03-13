@@ -1,6 +1,6 @@
 package entities;
 
-public class Immagine extends ElementoMultimediale implements Luminosita {
+public class Immagine extends ElementoMultimediale {
 
     private int luminosita;
 
@@ -22,25 +22,25 @@ public class Immagine extends ElementoMultimediale implements Luminosita {
 
 //    metodi
 
-    public void show() {
-        StringBuilder asterischi = new StringBuilder();
-//        SI ROMPE
-        for (int i = 0; i < getLuminosita(); i++) {
-            asterischi.append("*");
-        }
-        System.out.println(getTitolo() + asterischi);
-
-
-    }
 
     @Override
+    public void esegui() {
+        show();
+    }
+
+    public void show() {
+        System.out.println(getTitolo() + "*".repeat(luminosita));
+    }
+
+
     public void aumentaLuminosita() {
         if (luminosita > 0 && luminosita < 10)
             luminosita++;
         else System.out.println("la luminosita è al massimo");
+
     }
 
-    @Override
+
     public void diminuisciLuminosita() {
         if (luminosita > 0)
             luminosita--;
