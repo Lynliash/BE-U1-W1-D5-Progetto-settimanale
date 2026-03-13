@@ -8,8 +8,16 @@ public class Audio extends ElementoRiproducibile {
 
     @Override
     public void play() {
-        for (int i = 0; i <= getDurata(); i++) {
+        StringBuilder pEsclamativi = new StringBuilder();
+        for (int i = 0; i < getVolume(); i++) {
 //RICORDA DI FARE IL CICLO
+            pEsclamativi.append("!");
+
         }
+
+        for (int i = 0; i < getDurata(); i++) {
+            System.out.println(getTitolo() + pEsclamativi);
+        }
+
     }
 }

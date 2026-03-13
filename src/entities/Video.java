@@ -1,35 +1,26 @@
 package entities;
 
-public class Immagine extends ElementoMultimediale implements Luminosita {
+public class Video extends ElementoRiproducibile implements Luminosita {
 
     private int luminosita;
 
+//    costruttore
 
-    //    costruttore
-    public Immagine(String titolo, int luminosita) {
-        super(titolo);
+    public Video(String titolo, int durata, int volume, int luminosita) {
+        super(titolo, durata, volume);
         this.luminosita = luminosita;
     }
 
-//    getter
-
+    //    getter
     public int getLuminosita() {
         return luminosita;
     }
 
-//    setter
-
 
 //    metodi
 
-    public void show() {
-        StringBuilder asterischi = new StringBuilder();
-//        SI ROMPE
-        for (int i = 0; i < getLuminosita(); i++) {
-            asterischi.append("*");
-        }
-        System.out.println(getTitolo() + asterischi);
-
+    @Override
+    public void play() {
 
     }
 
